@@ -1,6 +1,6 @@
 @extends('layouts_pinjam.app')
 
-@section('title', 'Tambah Buku Pinjaman')
+@section('title', 'Tambah Data')
 
 @section('contents')
     <hr />

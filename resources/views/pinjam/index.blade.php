@@ -4,7 +4,7 @@
 
 @section('contents')
     <div class="d-flex align-item-center justify-content-between mb-3">
-        <a href="{{ route('pinjam.create') }}" class="btn btn-primary">Tambah Pinjaman</a>
+        <a href="{{ route('pinjam.create') }}" class="btn btn-primary">Tambah Transaksi</a>
         <a href="{{ route('pinjam.cetak_pdf') }}" class="btn btn-primary">Cetak Struk</a>
     </div>
     <hr />
