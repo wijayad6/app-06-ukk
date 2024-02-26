@@ -7,6 +7,7 @@ use App\Http\Controllers\PeminjamanController;
 use App\Http\Controllers\PeminjamController;
 use App\Http\Controllers\PetugasController;
 use App\Http\Controllers\RedirectController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,6 +55,7 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'loginAction')->name('login.action');
 
     Route::get('logout', 'logout')->middleware('auth')->name('logout');
+
 });
 
 Route::controller(BukuController::class)->prefix('buku')->group(function () {
@@ -74,4 +76,13 @@ Route::controller(PeminjamanController::class)->prefix('pinjam')->group(function
     Route::get('edit/{peminjaman_id}', 'edit')->name('pinjam.edit');
     Route::put('edit/{peminjaman_id}', 'update')->name('pinjam.update');
     Route::get('destroy/{peminjaman_id}', 'destroy')->name('pinjam.destroy');
+});
+Route::controller(UserController::class)->prefix('user')->group(function () {
+    Route::get('', 'index')->name('user');
+    Route::get('create', 'create')->name('user.create');
+    Route::post('store', 'store')->name('user.store');
+    Route::get('show/{user_id}', 'show')->name('user.show');
+    Route::get('edit/{user_id}', 'edit')->name('user.edit');
+    Route::put('edit/{user_id}', 'update')->name('user.update');
+    Route::get('destroy/{user_id}', 'destroy')->name('user.destroy');
 });

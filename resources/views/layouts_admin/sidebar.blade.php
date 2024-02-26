@@ -13,6 +13,11 @@
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
+        <a class="nav-link" href="{{ route('user') }}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>User</span></a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{{ route('buku') }}">
             <i class="fas fa-fw fa-table"></i>
             <span>Buku</span></a>

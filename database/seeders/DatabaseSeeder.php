@@ -31,6 +31,6 @@ class DatabaseSeeder extends Seeder
         Role::create([
             'role_name' => 'peminjam',
         ]);
-        User::factory()->create();
+        User::factory(10)->create();
     }
 }
