@@ -13,6 +13,7 @@ class Pinjam extends Model
     protected $primaryKey = 'peminjaman_id';
 
     protected $fillable = [
+        'user_id',
         'buku_id',
         'judul',
         'tanggal_pinjam',

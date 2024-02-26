@@ -14,7 +14,11 @@ class PeminjamanController extends Controller
      */
     public function index()
     {
-        $pinjam = Pinjam::with('buku')->orderBy('created_at', 'DESC')->get();
+        if (auth()->user()->role_id == 1 || auth()->user()->role_id == 2) {
+            $pinjam = Pinjam::with('buku')->orderBy('created_at', 'DESC')->get();
+        } else {
+            $pinjam = Pinjam::with('buku')->where('user_id', auth()->user()->user_id)->orderBy('created_at', 'DESC')->get();
+        }
 
         return view('pinjam.index', compact('pinjam'));
     }

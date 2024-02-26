@@ -12,16 +12,8 @@
     <hr class="sidebar-divider mb-3">
 
     <!-- Nav Item - Tables -->
-    {{-- <li class="nav-item">
-        <a class="nav-link" href="{{ route('dashboard_peminjam') }}">
-        <i class="fas fa-fw fa-home"></i>
-        <span>Beranda</span></a>
-    </li> --}}
-    {{-- <li class="nav-item">
-        <a class="nav-link" href="{{ route('pinjam') }}">
-        <i class="fas fa-fw fa-table"></i>
-        <span>Peminjaman</span></a>
-    </li> --}}
+
+
 
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">

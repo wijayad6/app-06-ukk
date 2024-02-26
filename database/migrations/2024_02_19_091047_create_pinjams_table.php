@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('pinjams', function (Blueprint $table) {
             $table->integerIncrements('peminjaman_id');
+            $table->integer('user_id');
             $table->integer('buku_id');
             $table->date('tanggal_pinjam');
             $table->date('tanggal_kembali');
