@@ -13,7 +13,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('dashboard_user') }}">
+        <a class="nav-link" href="{{ route('dashboard_peminjam') }}">
         <i class="fas fa-fw fa-home"></i>
         <span>Beranda</span></a>
     </li>

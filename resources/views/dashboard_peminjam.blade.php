@@ -1,4 +1,4 @@
-@extends('layouts_user.app')
+@extends('layouts_peminjam.app')
 
 @section('title', 'Halo Para Pembaca')
 

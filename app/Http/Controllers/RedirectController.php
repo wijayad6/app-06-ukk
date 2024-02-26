@@ -13,7 +13,7 @@ class RedirectController extends Controller
         }elseif(auth()->user()->role_id === 2) {
             return redirect('dashboard_petugas');
         }else{
-            return redirect('dashboard_user');
+            return redirect('dashboard_peminjam');
         }
     }
 }

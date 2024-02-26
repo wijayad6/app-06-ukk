@@ -28,7 +28,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        @include('layouts_user.sidebar')
+        @include('layouts_peminjam.sidebar')
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -38,7 +38,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                @include('layouts_user.navbar')
+                @include('layouts_peminjam.navbar')
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -52,7 +52,7 @@
                     </div>
 
                     @yield('contents')
-                    
+
 
                 </div>
                 <!-- /.container-fluid -->
@@ -61,7 +61,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            @include('layouts_user.footer')
+            @include('layouts_peminjam.footer')
             <!-- End of Footer -->
 
         </div>

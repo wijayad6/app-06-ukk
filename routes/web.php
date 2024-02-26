@@ -4,9 +4,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BukuController;
 use App\Http\Controllers\PeminjamanController;
+use App\Http\Controllers\PeminjamController;
 use App\Http\Controllers\PetugasController;
 use App\Http\Controllers\RedirectController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,7 +43,7 @@ Route::group(['middleware' => ['auth', 'checkrole:2']], function () {
 });
 
 Route::group(['middleware' => ['auth', 'checkrole:3']], function () {
-    Route::get('dashboard_user', [UserController::class, 'index'])->name('dashboard_user');
+    Route::get('dashboard_peminjam', [PeminjamController::class, 'index'])->name('dashboard_peminjam');
 });
 
 Route::controller(AuthController::class)->group(function () {

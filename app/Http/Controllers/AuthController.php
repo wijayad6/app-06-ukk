@@ -58,7 +58,7 @@ class AuthController extends Controller
             } else if (auth()->user()->role_id === 2) {
                 return redirect()->intended('dashboard_petugas');
             } else {
-                return redirect()->intended('dashboard_user');
+                return redirect()->intended('dashboard_peminjam');
             }
         }
 

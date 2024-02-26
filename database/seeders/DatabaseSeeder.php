@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
             'role_name' => 'petugas',
         ]);
         Role::create([
-            'role_name' => 'user',
+            'role_name' => 'peminjam',
         ]);
         User::factory()->create();
     }
