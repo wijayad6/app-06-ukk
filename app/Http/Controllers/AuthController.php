@@ -62,7 +62,7 @@ class AuthController extends Controller
             }
         }
 
-        return back()->with('error', 'email atau password salah');
+        return back()->with('errors', 'email atau password salah');
     }
     public function logout(Request $request)
     {

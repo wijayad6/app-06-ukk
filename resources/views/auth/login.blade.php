@@ -40,20 +40,17 @@
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
-                                    </div>
-                                    <form action="{{route('login.action')}}" method="POST" class="user">
-                                        @csrf
-                                        @if ($errors->any())
+
+                                        @if (Session::has('errors'))
                                             <div class="alert-danger">
                                                 <ul>
-                                                    @foreach ($errors->all() as $error)
-                                                        <li>
-                                                            {{ $error }}
-                                                        </li>
-                                                    @endforeach
+                                                    {{ $errors }}
                                                 </ul>
                                             </div>
                                         @endif
+                                    </div>
+                                    <form action="{{ route('login.action') }}" method="POST" class="user">
+                                        @csrf
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
@@ -69,7 +66,7 @@
                                         <hr>
                                     </form>
                                     <div class="text-center">
-                                        <a class="small" href="{{route('register')}}">Create an Account!</a>
+                                        <a class="small" href="{{ route('register') }}">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>

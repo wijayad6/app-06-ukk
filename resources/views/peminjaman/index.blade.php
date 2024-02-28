@@ -17,7 +17,9 @@
         <thead class="table-primary">
             <tr>
                 <th>#</th>
-                <th>Judul Buku</th>
+                <th>Peminjam</th>
+                <th>Alamat</th>
+                <th>Buku</th>
                 <th>Tanggal Pinjam</th>
                 <th>Tanggal Kembali</th>
                 <th>Status</th>
@@ -30,6 +32,8 @@
                     <tr>
                         <td class="align-middle">{{$loop->iteration}}</td>
                         <td class="align-middle">{{$rs->user->username}}</td>
+                        <td class="align-middle">{{$rs->user->alamat}}</td>
+                        <td class="align-middle">{{$rs->buku->judul}}</td>
                         <td class="align-middle">{{$rs->tanggal_pinjam}}</td>
                         <td class="align-middle">{{$rs->tanggal_kembali}}</td>
                         <td class="align-middle">{{$rs->status}}</td>

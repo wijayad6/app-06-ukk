@@ -16,11 +16,11 @@ class PeminjamanController extends Controller
     {
         if (auth()->user()->role_id == 1 || auth()->user()->role_id == 2) {
             $pinjam = Pinjam::with('buku')->orderBy('created_at', 'DESC')->get();
+            return view('peminjaman.index', compact('pinjam'));
         } else {
             $pinjam = Pinjam::with('buku')->where('user_id', auth()->user()->user_id)->orderBy('created_at', 'DESC')->get();
+            return view('pinjam.index', compact('pinjam'));
         }
-
-        return view('pinjam.index', compact('pinjam'));
     }
 
     /**

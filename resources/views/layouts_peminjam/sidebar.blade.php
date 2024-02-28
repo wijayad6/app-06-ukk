@@ -18,10 +18,15 @@
         <span>Beranda</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('pinjam') }}">
+        <a class="nav-link" href="{{ route('peminjaman') }}">
         <i class="fas fa-fw fa-table"></i>
         <span>Peminjaman</span></a>
     </li>
+    {{-- <li class="nav-item">
+        <a class="nav-link" href="{{ route('koleksi') }}">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Koleksi</span></a>
+    </li> --}}
 
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
