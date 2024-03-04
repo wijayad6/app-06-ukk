@@ -76,7 +76,7 @@ class PeminjamanController extends Controller
 
         $pinjam->update($request->all());
 
-        return redirect()->route('pinjam')->with('success', 'Data pinjaman berhasil diubah');
+        return redirect()->route('peminjaman')->with('success', 'Data pinjaman berhasil diubah');
     }
 
     /**

@@ -18,6 +18,12 @@
             <span>Buku</span></a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('peminjaman') }}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Peminjaman</span></a>
+    </li>
+
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
