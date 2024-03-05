@@ -57,9 +57,9 @@
                                     @error('alamat')
                                         <span class="invalid-feedback">{{ $message }}</span>
                                     @enderror
-                                    <input name="role_id" type="text"
+                                    <input name="role_id" type="hidden"
                                         class="form-control form-control-user @error('role_id')is-invalid @enderror mb-3"
-                                        id="examplerole_id" placeholder="Role (1, 2, 3)">
+                                        id="examplerole_id" placeholder="Role (1, 2, 3)" value="3">
                                     @error('role_id')
                                         <span class="invalid-feedback">{{ $message }}</span>
                                     @enderror

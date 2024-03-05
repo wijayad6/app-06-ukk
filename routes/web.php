@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BukuController;
+use App\Http\Controllers\KoleksiController;
 use App\Http\Controllers\PeminjamanController;
 use App\Http\Controllers\PeminjamController;
 use App\Http\Controllers\PetugasController;
@@ -67,7 +68,7 @@ Route::controller(BukuController::class)->prefix('buku')->group(function () {
     Route::put('edit/{buku_id}', 'update')->name('buku.update');
     Route::get('destroy/{buku_id}', 'destroy')->name('buku.destroy');
 });
-Route::controller(PeminjamanController::class)->prefix('pinjam', 'peminjaman')->group(function () {
+Route::controller(PeminjamanController::class)->prefix('pinjam')->group(function () {
     Route::get('', 'index')->name('pinjam');
     Route::get('', 'index')->name('peminjaman');
     Route::get('pinjam_pdf', 'cetak_pdf')->name('pinjam.cetak_pdf');
@@ -86,4 +87,10 @@ Route::controller(UserController::class)->prefix('user')->group(function () {
     Route::get('edit/{user_id}', 'edit')->name('user.edit');
     Route::put('edit/{user_id}', 'update')->name('user.update');
     Route::get('destroy/{user_id}', 'destroy')->name('user.destroy');
+});
+Route::controller(KoleksiController::class)->prefix('koleksi')->group(function () {
+    Route::get('', 'index')->name('koleksi');
+    Route::post('store', 'store')->name('koleksi.store');
+    Route::put('edit/{koleksi_id}', 'update')->name('koleksi.update');
+    Route::get('destroy/{koleksi_id}', 'destroy')->name('koleksi.destroy');
 });

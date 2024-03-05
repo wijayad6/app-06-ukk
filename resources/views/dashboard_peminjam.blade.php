@@ -3,6 +3,7 @@
 @section('title', 'Halo Para Pembaca')
 
 @section('contents')
+    @csrf
     <div class="container-fluid">
         <div class="row">
             @if ($buku->count() > 0)
@@ -13,8 +14,13 @@
                             <h5 class="card-title">{{ $rs->judul }}</h5>
                             {{-- <p class="card-text">Penulis : {{ $rs->penulis }}</p>
                             <p class="card-text">Penerbit : {{ $rs->penerbit }}</p> --}}
-                            <p class="card-text">{{ $rs->tahun_terbit }}</p>
-                            <a href="{{route('buku.show', $rs->buku_id)}}" class="btn btn-primary">Lihat</a>
+                            <p class="card-text">{{ $rs->penulis }}</p>
+                            <form action="{{ route('koleksi.store', $rs->koleksi_id) }}" method="post">
+                                @csrf
+                                <input type="text" name="buku_id" value="{{ $rs->buku_id }}" hidden>
+                                <input type="text" name="user_id" value="{{ auth()->user()->user_id }}" hidden>
+                                <button class="btn btn-primary">+ Koleksi</button>
+                            </form>
                         </div>
                     </div>
                 @endforeach

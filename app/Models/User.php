@@ -58,5 +58,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Pinjam::class, 'user_id');
     }
-    
+    public function koleksi()
+    {
+        return $this->hasMany(Koleksi::class,'user_id');
+    }
 }
