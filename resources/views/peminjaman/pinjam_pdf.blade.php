@@ -7,6 +7,7 @@
         <thead class="table-primary">
             <tr>
                 <th>#</th>
+                <th>Nama Peminjam</th>
                 <th>Judul Buku</th>
                 <th>Tanggal Pinjam</th>
                 <th>Tanggal Kembali</th>
@@ -18,6 +19,7 @@
                 @foreach ($pinjam as $rs)
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
+                        <td class="align-middle">{{ $rs->user->name }}</td>
                         <td class="align-middle">{{ $rs->buku->judul }}</td>
                         <td class="align-middle">{{ $rs->tanggal_pinjam }}</td>
                         <td class="align-middle">{{ $rs->tanggal_kembali }}</td>

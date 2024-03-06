@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -13,6 +14,8 @@ class UserController extends Controller
     public function index()
     {
         $user = User::orderBy('created_at', 'DESC')->get();
+
+        $user = DB::table('users')->paginate(10);
 
         return view('user.index', compact('user'));
     }
@@ -77,5 +80,14 @@ class UserController extends Controller
         $user->delete();
 
         return redirect()->route('user')->with('success', 'User berhasil dihapus');
+    }
+
+    public function cari(Request $request)
+    {
+        $cari = $request->cari;
+
+        $user = DB::table('users')->where('name', 'like', '%'.$cari.'%')->paginate();
+        
+        return view('user.index', compact('user'));
     }
 }

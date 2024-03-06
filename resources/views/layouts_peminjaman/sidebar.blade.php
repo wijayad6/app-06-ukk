@@ -11,10 +11,6 @@
     <!-- Divider -->
     <hr class="sidebar-divider mb-3">
 
-    <!-- Nav Item - Tables -->
-
-
-
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>

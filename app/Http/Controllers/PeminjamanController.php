@@ -95,6 +95,6 @@ class PeminjamanController extends Controller
     {
         $pinjam = Pinjam::with('buku')->orderBy('created_at', 'DESC')->get();
 
-        return view('pinjam.pinjam_pdf', compact('pinjam'));
+        return view('peminjaman.pinjam_pdf', compact('pinjam'));
     }
 }

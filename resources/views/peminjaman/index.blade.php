@@ -4,8 +4,8 @@
 
 @section('contents')
     <div class="d-flex align-item-center justify-content-between mb-3">
-        <a href="{{ route('pinjam.create') }}" class="btn btn-primary">Tambah Transaksi</a>
-        <a href="{{ route('pinjam.cetak_pdf') }}" class="btn btn-primary">Cetak Struk</a>
+        {{-- <a href="{{ route('pinjam.create') }}" class="btn btn-primary">Tambah Transaksi</a> --}}
+        <a href="{{ route('peminjaman.cetak_pdf') }}" class="btn btn-primary">Cetak Laporan</a>
     </div>
     <hr />
     @if (Session::has('success'))

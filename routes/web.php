@@ -71,7 +71,7 @@ Route::controller(BukuController::class)->prefix('buku')->group(function () {
 Route::controller(PeminjamanController::class)->prefix('pinjam')->group(function () {
     Route::get('', 'index')->name('pinjam');
     Route::get('', 'index')->name('peminjaman');
-    Route::get('pinjam_pdf', 'cetak_pdf')->name('pinjam.cetak_pdf');
+    Route::get('pinjam_pdf', 'cetak_pdf')->name('peminjaman.cetak_pdf');
     Route::get('create', 'create')->name('pinjam.create');
     Route::post('store', 'store')->name('pinjam.store');
     Route::get('show/{peminjaman_id}', 'show')->name('pinjam.show');
@@ -81,6 +81,7 @@ Route::controller(PeminjamanController::class)->prefix('pinjam')->group(function
 });
 Route::controller(UserController::class)->prefix('user')->group(function () {
     Route::get('', 'index')->name('user');
+    Route::get('cari', 'cari')->name('user.cari');
     Route::get('create', 'create')->name('user.create');
     Route::post('store', 'store')->name('user.store');
     Route::get('show/{user_id}', 'show')->name('user.show');
