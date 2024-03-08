@@ -40,7 +40,7 @@ class PeminjamanController extends Controller
     {
         Pinjam::create($request->all());
 
-        return redirect()->route('pinjam')->with('success', 'Buku berhasil ditambah ke daftar pinjaman');
+        return redirect()->route('peminjaman')->with('success', 'Buku berhasil ditambah ke daftar pinjaman');
     }
 
     /**
@@ -88,7 +88,7 @@ class PeminjamanController extends Controller
 
         $pinjam->delete();
 
-        return redirect()->route('pinjam')->with('success', 'Buku berhasil dihapus dari daftar pinjaman');
+        return redirect()->route('peminjaman')->with('success', 'Buku berhasil dihapus dari daftar pinjaman');
     }
 
     public function cetak_pdf()
