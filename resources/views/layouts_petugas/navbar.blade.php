@@ -6,12 +6,13 @@
     </button>
 
     <!-- Topbar Search -->
-    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"
+        action="{{ route('buku.cari') }}">
         <div class="input-group">
-            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                aria-label="Search" aria-describedby="basic-addon2">
+            <input type="text" name="cari" class="form-control bg-light border-0 small" placeholder="Search for..."
+                value="{{ old('cari') }}"aria-label="Search" aria-describedby="basic-addon2">
             <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
+                <button class="btn btn-primary" type="submit" value="cari">
                     <i class="fas fa-search fa-sm"></i>
                 </button>
             </div>
@@ -51,10 +52,10 @@
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
-                    {{auth()->user()->username}}
+                    {{ auth()->user()->username }}
                     <br>
                     <small>
-                        {{auth()->user()->role_id}}
+                        {{ auth()->user()->role_id }}
                     </small>
                 </span>
                 <img class="img-profile rounded-circle" src="{{ asset('admin_assets/img/undraw_profile.svg') }}">

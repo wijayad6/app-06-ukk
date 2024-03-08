@@ -33,10 +33,6 @@
             <!-- Main Content -->
             <div id="content">
 
-                <!-- Topbar -->
-                @include('layouts_cetak.navbar')
-                <!-- End of Topbar -->
-
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -54,10 +50,6 @@
 
             </div>
             <!-- End of Main Content -->
-
-            <!-- Footer -->
-            @include('layouts_cetak.footer')
-            <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->

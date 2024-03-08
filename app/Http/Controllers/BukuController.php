@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Buku;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BukuController extends Controller
 {
@@ -13,6 +14,8 @@ class BukuController extends Controller
     public function index()
     {
         $buku = Buku::orderBy('created_at', 'DESC')->get();
+
+        $buku = DB::table('bukus')->paginate(10);
 
         return view('buku.index', compact('buku'));
     }
@@ -77,5 +80,14 @@ class BukuController extends Controller
         $buku->delete();
 
         return redirect()->route('buku')->with('success', 'Buku berhasil dihapus');
+    }
+
+    public function cari(Request $request)
+    {
+        $cari = $request->cari;
+
+        $buku = DB::table('bukus')->where('judul', 'like', '%' . $cari . '%')->paginate();
+
+        return view('buku.index', compact('buku'));
     }
 }

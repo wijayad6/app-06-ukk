@@ -61,6 +61,7 @@ Route::controller(AuthController::class)->group(function () {
 
 Route::controller(BukuController::class)->prefix('buku')->group(function () {
     Route::get('', 'index')->name('buku');
+    Route::get('cari', 'cari')->name('buku.cari');
     Route::get('create', 'create')->name('buku.create');
     Route::post('store', 'store')->name('buku.store');
     Route::get('show/{buku_id}', 'show')->name('buku.show');
