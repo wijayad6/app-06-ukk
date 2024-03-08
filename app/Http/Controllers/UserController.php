@@ -15,7 +15,7 @@ class UserController extends Controller
     {
         $user = User::orderBy('created_at', 'DESC')->get();
 
-        $user = DB::table('users')->paginate(10);
+        $user = DB::table('users')->paginate();
 
         return view('user.index', compact('user'));
     }
@@ -86,8 +86,8 @@ class UserController extends Controller
     {
         $cari = $request->cari;
 
-        $user = DB::table('users')->where('name', 'like', '%'.$cari.'%')->paginate();
-        
+        $user = DB::table('users')->where('name', 'like', '%' . $cari . '%')->paginate();
+
         return view('user.index', compact('user'));
     }
 }

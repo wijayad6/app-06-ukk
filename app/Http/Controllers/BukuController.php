@@ -15,7 +15,7 @@ class BukuController extends Controller
     {
         $buku = Buku::orderBy('created_at', 'DESC')->get();
 
-        $buku = DB::table('bukus')->paginate(10);
+        $buku = DB::table('bukus')->paginate();
 
         return view('buku.index', compact('buku'));
     }
